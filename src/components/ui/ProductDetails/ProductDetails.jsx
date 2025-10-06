@@ -24,7 +24,8 @@ export default function ProductDetails() {
         <section className="max-w-7xl mx-auto px-4 md:px-8 py-10 grid grid-cols-1 lg:grid-cols-2 gap-8 ">
             {/* Left column – images */}
             <div>
-                <div className="relative w-full h-[550px] mb-4 overflow-hidden bg-gray-50 ">
+                {/* Main Image */}
+                <div className="relative w-full h-[480px] mb-4 overflow-hidden">
                     <Image
                         src={images[mainImageIdx]}
                         alt="Product image"
@@ -34,15 +35,15 @@ export default function ProductDetails() {
                     />
                 </div>
 
-                {/* Thumbnails */}
-                <div className="flex gap-4 overflow-x-auto pb-1">
+                {/* Thumbnails (centered below image) */}
+                <div className="flex justify-start gap-4 overflow-x-auto pb-1">
                     {images.map((src, idx) => (
                         <button
                             key={src}
                             onClick={() => setMainImageIdx(idx)}
                             className={`relative w-24 h-24 border-2 ${mainImageIdx === idx
-                                ? 'border-black dark:border-white'
-                                : 'border-transparent hover:border-gray-300 dark:hover:border-gray-600'
+                                    ? 'border-black dark:border-white'
+                                    : 'border-transparent hover:border-gray-300 dark:hover:border-gray-600'
                                 } flex-shrink-0`}
                         >
                             <Image src={src} alt="thumb" fill className="object-cover" />
@@ -50,6 +51,7 @@ export default function ProductDetails() {
                     ))}
                 </div>
             </div>
+
 
             {/* Right column – details */}
             <div className="space-y-6 lg:pl-10">
@@ -65,7 +67,7 @@ export default function ProductDetails() {
 
                 {/* Pricing */}
                 <div className="flex items-center gap-3">
-                    <p className="line-through text-gray-400 dark:text-gray-500 text-lg">Tk 2,200</p>
+                    <p className="line-through text-gray-400 dark:text-gray-400 text-lg">Tk 2,200</p>
                     <p className="text-2xl font-semibold dark:text-white">Tk1,760 BDT</p>
                     <SaleBadge />
                 </div>
@@ -83,7 +85,7 @@ export default function ProductDetails() {
                                 onClick={() => setSize(s)}
                                 className={`px-5 py-2 border rounded-full text-sm uppercase ${size === s
                                     ? 'bg-black text-white dark:bg-white dark:text-black'
-                                    : 'border-gray-300 dark:border-gray-600 hover:border-black dark:hover:border-white'
+                                    : 'border-gray-300 dark:border-gray-400 text-black dark:text-white hover:border-black dark:hover:border-white'
                                     }`}
                             >
                                 {s}
