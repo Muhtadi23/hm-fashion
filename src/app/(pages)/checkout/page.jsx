@@ -19,7 +19,7 @@ export default function CheckoutPage() {
     return (
         <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
             <div className="max-w-7xl mx-auto px-4 py-8">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div className="flex flex-col-reverse lg:flex-row gap-8">
                     {/* Left Column - Forms */}
                     <div className="space-y-6">
                         {/* Delivery */}
@@ -122,46 +122,48 @@ export default function CheckoutPage() {
                         <div className="p-6 border border-gray-200 dark:border-gray-800 dark:bg-gray-950 rounded-lg">
                             <h2 className="text-xl font-bold mb-4 text-gray-900 dark:text-white">Shipping method</h2>
 
-                            {[
-                                {
-                                    id: "standard",
-                                    label: "Standard delivery (1-3 days inside Dhaka, 3-5 outside Dhaka)",
-                                    price: "৳70-80",
-                                },
-                                {
-                                    id: "nextday",
-                                    label: "Next Day Delivery (inside Dhaka only, if ordered before 5:00pm)",
-                                    price: "৳100.00",
-                                },
-                                {
-                                    id: "immediate",
-                                    label:
-                                        "Immediate delivery inside Dhaka (fastest possible using UBER -10am–5pm, prepayment required)",
-                                    price: "৳200.00",
-                                },
-                            ].map((method) => (
-                                <label
-                                    key={method.id}
-                                    className={`flex items-center justify-between p-4 border rounded-md cursor-pointer transition-colors
-                                        ${shippingMethod === method.id
-                                            ? "border-black dark:border-gray-400 bg-gray-50 dark:bg-gray-800"
-                                            : "border-gray-400 dark:border-gray-700 hover:border-gray-500"
-                                        }`}
-                                >
-                                    <div className="flex items-center gap-3">
-                                        <input
-                                            type="radio"
-                                            name="shipping"
-                                            value={method.id}
-                                            checked={shippingMethod === method.id}
-                                            onChange={(e) => setShippingMethod(e.target.value)}
-                                            className="w-5 h-5"
-                                        />
-                                        <span className="text-sm text-gray-800 dark:text-gray-200">{method.label}</span>
-                                    </div>
-                                    <span className="font-semibold text-gray-900 dark:text-gray-100">{method.price}</span>
-                                </label>
-                            ))}
+                            <div className="space-y-3">
+                                {[
+                                    {
+                                        id: "standard",
+                                        label: "Standard delivery (1-3 days inside Dhaka, 3-5 outside Dhaka)",
+                                        price: "৳80",
+                                    },
+                                    {
+                                        id: "nextday",
+                                        label: "Next Day Delivery (inside Dhaka only, if ordered before 5:00pm)",
+                                        price: "৳100.00",
+                                    },
+                                    {
+                                        id: "immediate",
+                                        label:
+                                            "Immediate delivery inside Dhaka (fastest possible using UBER -10am–5pm, prepayment required)",
+                                        price: "৳200.00",
+                                    },
+                                ].map((method) => (
+                                    <label
+                                        key={method.id}
+                                        className={`flex items-center justify-between p-4 border rounded-md cursor-pointer transition-colors 
+                    ${shippingMethod === method.id
+                                                ? "border-black dark:border-gray-400 bg-gray-50 dark:bg-gray-800"
+                                                : "border-gray-400 dark:border-gray-700 hover:border-gray-500"
+                                            }`}
+                                    >
+                                        <div className="flex items-center gap-3">
+                                            <input
+                                                type="radio"
+                                                name="shipping"
+                                                value={method.id}
+                                                checked={shippingMethod === method.id}
+                                                onChange={(e) => setShippingMethod(e.target.value)}
+                                                className="w-5 h-5"
+                                            />
+                                            <span className="text-sm text-gray-800 dark:text-gray-200">{method.label}</span>
+                                        </div>
+                                        <span className="font-semibold text-gray-900 dark:text-gray-100">{method.price}</span>
+                                    </label>
+                                ))}
+                            </div>
                         </div>
 
                         {/* Payment */}
@@ -248,9 +250,9 @@ export default function CheckoutPage() {
                         </div>
 
                         {/* Review Order Button */}
-                        <button className="w-full bg-black text-white py-4 font-semibold text-lg hover:bg-gray-800 transition-colors dark:bg-gray-100 dark:text-black dark:hover:bg-gray-200 rounded-md">
+                        {/* <button className="w-full bg-black text-white py-4 font-semibold text-lg hover:bg-gray-800 transition-colors dark:bg-gray-100 dark:text-black dark:hover:bg-gray-200 rounded-md">
                             Review order
-                        </button>
+                        </button> */}
                     </div>
 
                     {/* Right Column - Order Summary */}
@@ -288,9 +290,7 @@ export default function CheckoutPage() {
                                     onChange={(e) => setDiscountCode(e.target.value)}
                                     className="flex-1 px-4 py-2 border border-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100 text-sm focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-gray-300 rounded-md"
                                 />
-                                <button className="px-6 py-2 bg-gray-200 dark:bg-gray-700 dark:text-gray-100 text-gray-700 font-medium text-sm hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors rounded-md">
-                                    Apply
-                                </button>
+
                             </div>
 
                             {/* Summary */}
@@ -330,8 +330,14 @@ export default function CheckoutPage() {
                             <p className="text-xs text-gray-600 dark:text-gray-400 mt-2">
                                 Including ৳0.00 in taxes
                             </p>
+
                         </div>
+
+                        <button className="w-full mt-4 bg-black text-white py-4 font-semibold text-lg hover:bg-gray-800 transition-colors dark:bg-gray-100 dark:text-black dark:hover:bg-gray-200 rounded-md">
+                            Review order
+                        </button>
                     </div>
+
                 </div>
             </div>
         </div>
