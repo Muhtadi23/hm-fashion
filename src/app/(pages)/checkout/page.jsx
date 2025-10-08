@@ -23,7 +23,7 @@ export default function CheckoutPage() {
                     {/* Left Column - Forms */}
                     <div className="space-y-6">
                         {/* Delivery */}
-                        <div className="p-6 border border-gray-200 dark:border-gray-800 dark:bg-gray-950 rounded-lg">
+                        <div className="p-6 border border-gray-200 dark:border-gray-800 dark:bg-gray-950">
                             <h2 className="text-xl font-bold mb-4 text-gray-900 dark:text-white">Delivery</h2>
 
                             <div className="space-y-4">
@@ -31,7 +31,7 @@ export default function CheckoutPage() {
                                     <label className="block text-sm font-medium mb-2 text-gray-800 dark:text-gray-200">
                                         Country/Region
                                     </label>
-                                    <select className="w-full bg-white dark:bg-gray-800 dark:text-gray-100 px-4 py-3 border border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-gray-300 rounded-md">
+                                    <select className="w-full bg-white dark:bg-gray-800 dark:text-gray-100 px-4 py-3 border border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-gray-300 ">
                                         <option>Bangladesh</option>
                                     </select>
                                 </div>
@@ -40,37 +40,37 @@ export default function CheckoutPage() {
                                     <input
                                         type="text"
                                         placeholder="First name"
-                                        className="px-4 py-3 border border-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-gray-300 rounded-md"
+                                        className="px-4 py-3 border border-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-gray-300 "
                                     />
                                     <input
                                         type="text"
                                         placeholder="Last name"
-                                        className="px-4 py-3 border border-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-gray-300 rounded-md"
+                                        className="px-4 py-3 border border-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-gray-300 "
                                     />
                                 </div>
 
                                 <input
                                     type="text"
                                     placeholder="Address"
-                                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-gray-300 rounded-md"
+                                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-gray-300 "
                                 />
 
                                 <input
                                     type="text"
                                     placeholder="Apartment, suite, etc. (optional)"
-                                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-gray-300 rounded-md"
+                                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-gray-300 "
                                 />
 
                                 <div className="grid grid-cols-2 gap-4">
                                     <input
                                         type="text"
                                         placeholder="City"
-                                        className="px-4 py-3 border border-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-gray-300 rounded-md"
+                                        className="px-4 py-3 border border-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-gray-300 "
                                     />
                                     <input
                                         type="text"
                                         placeholder="Postal code (optional)"
-                                        className="px-4 py-3 border border-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-gray-300 rounded-md"
+                                        className="px-4 py-3 border border-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-gray-300 "
                                     />
                                 </div>
 
@@ -78,7 +78,7 @@ export default function CheckoutPage() {
                                     <input
                                         type="tel"
                                         placeholder="Phone"
-                                        className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-gray-300 rounded-md"
+                                        className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-gray-300 "
                                     />
                                     <div className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400">
                                         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -97,7 +97,7 @@ export default function CheckoutPage() {
                                         type="checkbox"
                                         checked={saveInfo}
                                         onChange={(e) => setSaveInfo(e.target.checked)}
-                                        className="w-4 h-4 rounded border-gray-300 dark:border-gray-600 dark:bg-gray-700"
+                                        className="w-4 h-4  border-gray-300 dark:border-gray-600 dark:bg-gray-700"
                                     />
                                     <span className="text-sm text-gray-700 dark:text-gray-300">
                                         Save this information for next time
@@ -109,7 +109,7 @@ export default function CheckoutPage() {
                                         type="checkbox"
                                         checked={textNews}
                                         onChange={(e) => setTextNews(e.target.checked)}
-                                        className="w-4 h-4 rounded border-gray-300 dark:border-gray-600 dark:bg-gray-700"
+                                        className="w-4 h-4  border-gray-300 dark:border-gray-600 dark:bg-gray-700"
                                     />
                                     <span className="text-sm text-gray-700 dark:text-gray-300">
                                         Text me with news and offers
@@ -119,7 +119,7 @@ export default function CheckoutPage() {
                         </div>
 
                         {/* Shipping Method */}
-                        <div className="p-6 border border-gray-200 dark:border-gray-800 dark:bg-gray-950 rounded-lg">
+                        <div className="p-6 border border-gray-200 dark:border-gray-800 dark:bg-gray-950 -lg">
                             <h2 className="text-xl font-bold mb-4 text-gray-900 dark:text-white">Shipping method</h2>
 
                             <div className="space-y-3">
@@ -143,7 +143,7 @@ export default function CheckoutPage() {
                                 ].map((method) => (
                                     <label
                                         key={method.id}
-                                        className={`flex items-center justify-between p-4 border rounded-md cursor-pointer transition-colors 
+                                        className={`flex items-center justify-between p-4 border  cursor-pointer transition-colors 
                     ${shippingMethod === method.id
                                                 ? "border-black dark:border-gray-400 bg-gray-50 dark:bg-gray-800"
                                                 : "border-gray-400 dark:border-gray-700 hover:border-gray-500"
@@ -167,7 +167,7 @@ export default function CheckoutPage() {
                         </div>
 
                         {/* Payment */}
-                        <div className="p-6 border border-gray-200 dark:border-gray-800 dark:bg-gray-950 rounded-lg">
+                        <div className="p-6 border border-gray-200 dark:border-gray-800 dark:bg-gray-950 -lg">
                             <h2 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">Payment</h2>
                             <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
                                 All transactions are secure and encrypted.
@@ -181,7 +181,7 @@ export default function CheckoutPage() {
                                 ].map((method) => (
                                     <label
                                         key={method.id}
-                                        className={`flex items-center justify-between p-4 border rounded-md cursor-pointer transition-colors
+                                        className={`flex items-center justify-between p-4 border  cursor-pointer transition-colors
                                             ${paymentMethod === method.id
                                                 ? "border-black dark:border-gray-400 bg-gray-50 dark:bg-gray-800"
                                                 : "border-gray-400 dark:border-gray-700 hover:border-gray-500"
@@ -204,7 +204,7 @@ export default function CheckoutPage() {
                                 ))}
 
                                 {paymentMethod === "cod" && (
-                                    <div className="p-4 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-md">
+                                    <div className="p-4 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 ">
                                         <p className="text-sm text-gray-700 dark:text-gray-300">
                                             APPLICABLE ONLY FOR BANGLADESH. You can pay in cash to our courier when you
                                             receive the goods at your doorstep.
@@ -215,11 +215,11 @@ export default function CheckoutPage() {
                         </div>
 
                         {/* Billing Address */}
-                        <div className="p-6 border border-gray-200 dark:border-gray-800 dark:bg-gray-950 rounded-lg">
+                        <div className="p-6 border border-gray-200 dark:border-gray-800 dark:bg-gray-950 -lg">
                             <h2 className="text-xl font-bold mb-4 text-gray-900 dark:text-white">Billing address</h2>
 
                             <div className="space-y-3">
-                                <label className="flex items-center p-4 border border-gray-400 dark:border-gray-700 rounded-md cursor-pointer">
+                                <label className="flex items-center p-4 border border-gray-400 dark:border-gray-700  cursor-pointer">
                                     <input
                                         type="radio"
                                         name="billing"
@@ -233,7 +233,7 @@ export default function CheckoutPage() {
                                     </span>
                                 </label>
 
-                                <label className="flex items-center p-4 border border-gray-400 dark:border-gray-700 rounded-md cursor-pointer hover:border-gray-500">
+                                <label className="flex items-center p-4 border border-gray-400 dark:border-gray-700  cursor-pointer hover:border-gray-500">
                                     <input
                                         type="radio"
                                         name="billing"
@@ -250,23 +250,23 @@ export default function CheckoutPage() {
                         </div>
 
                         {/* Review Order Button */}
-                        {/* <button className="w-full bg-black text-white py-4 font-semibold text-lg hover:bg-gray-800 transition-colors dark:bg-gray-100 dark:text-black dark:hover:bg-gray-200 rounded-md">
+                        <button className="w-full py-4 font-semibold text-lg hover:bg-gray-800 transition-colors dark:bg-gray-100  dark:hover:bg-gray-400 cursor-pointer">
                             Review order
-                        </button> */}
+                        </button>
                     </div>
 
                     {/* Right Column - Order Summary */}
                     <div className="lg:sticky lg:top-8 h-fit">
-                        <div className="bg-white dark:bg-gray-950 p-6 rounded-lg border border-gray-200 dark:border-gray-800">
+                        <div className="bg-white dark:bg-gray-950 p-6 -lg border border-gray-200 dark:border-gray-800">
                             {/* Product */}
                             <div className="flex gap-4 mb-6">
                                 <div className="relative">
                                     <img
                                         src="/white-waffle-henley-shirt.jpg"
                                         alt="Product"
-                                        className="w-20 h-20 object-cover border border-gray-200 dark:border-gray-700 rounded-md"
+                                        className="w-20 h-20 object-cover border border-gray-200 dark:border-gray-700 "
                                     />
-                                    <div className="absolute -top-2 -right-2 bg-gray-700 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs font-semibold">
+                                    <div className="absolute -top-2 -right-2 bg-gray-700 text-white -full w-6 h-6 flex items-center justify-center text-xs font-semibold">
                                         1
                                     </div>
                                 </div>
@@ -288,7 +288,7 @@ export default function CheckoutPage() {
                                     placeholder="Discount code or gift card"
                                     value={discountCode}
                                     onChange={(e) => setDiscountCode(e.target.value)}
-                                    className="flex-1 px-4 py-2 border border-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100 text-sm focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-gray-300 rounded-md"
+                                    className="flex-1 px-4 py-2 border border-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100 text-sm focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-gray-300 "
                                 />
 
                             </div>
@@ -332,10 +332,9 @@ export default function CheckoutPage() {
                             </p>
 
                         </div>
-
-                        <button className="w-full mt-4 bg-black text-white py-4 font-semibold text-lg hover:bg-gray-800 transition-colors dark:bg-gray-100 dark:text-black dark:hover:bg-gray-200 rounded-md">
+                        {/* <button className="w-full mt-4 bg-black text-white py-4 font-semibold text-lg hover:bg-gray-800 transition-colors dark:bg-gray-100 dark:text-black dark:hover:bg-gray-200 ">
                             Review order
-                        </button>
+                        </button> */}
                     </div>
 
                 </div>
