@@ -8,7 +8,7 @@ import DropdownItem from './DropdownItem';
 
 const navItems = [
     { label: 'HOME', href: '/' },
-    { label: 'Our Store', href: '/our-store' },
+    { label: 'OUR STORE', href: '/our-store' },
     { label: 'SHOES', href: '/shoes' },
     {
         label: "MEN'S",
