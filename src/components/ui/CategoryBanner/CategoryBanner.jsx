@@ -19,7 +19,7 @@ const CategoryBanner = ({ imageSrc, bannerContent }) => {
                         </div>
 
                         {/* Heading */}
-                        <h1 className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-black leading-tight text-main-gray dark:text-white">
+                        <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black leading-tight text-main-gray dark:text-white">
                             {bannerContent}
                         </h1>
 
@@ -42,7 +42,7 @@ const CategoryBanner = ({ imageSrc, bannerContent }) => {
 
                     {/* Image Section */}
                     <div className="flex-1 w-full max-w-xs sm:max-w-sm mx-auto lg:max-w-md relative">
-                        <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl shadow-lg">
+                        <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl ">
                             <Image
                                 src={imageSrc}
                                 alt="Category Banner"

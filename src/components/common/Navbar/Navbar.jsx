@@ -7,9 +7,9 @@ import { ChevronDown, Search, ShoppingBag } from 'lucide-react';
 import DropdownItem from './DropdownItem';
 
 const navItems = [
-    { label: 'HOME', href: '/' },
+    // { label: 'HOME', href: '/' },
     { label: 'OUR STORE', href: '/our-store' },
-    { label: 'SHOES', href: '/shoes' },
+    // { label: 'SHOES', href: '/shoes' },
     {
         label: "MEN'S",
         key: 'mens',
@@ -24,26 +24,26 @@ const navItems = [
             { title: 'Tops', href: '/womens/tops' },
         ],
     },
-    {
-        label: "KID'S",
-        key: 'kids',
-        children: [
-            {
-                title: 'Boys',
-                children: [
-                    { title: 'Boys Shirts', href: '/boys/shirts' },
-                    { title: 'Boys Pants', href: '/boys/pants' },
-                ],
-            },
-            {
-                title: 'Girls',
-                children: [
-                    { title: 'Girls Tops', href: '/girls/tops' },
-                    { title: 'Girls Skirts', href: '/girls/skirts' },
-                ],
-            },
-        ],
-    },
+    // {
+    //     label: "KID'S",
+    //     key: 'kids',
+    //     children: [
+    //         {
+    //             title: 'Boys',
+    //             children: [
+    //                 { title: 'Boys Shirts', href: '/boys/shirts' },
+    //                 { title: 'Boys Pants', href: '/boys/pants' },
+    //             ],
+    //         },
+    //         {
+    //             title: 'Girls',
+    //             children: [
+    //                 { title: 'Girls Tops', href: '/girls/tops' },
+    //                 { title: 'Girls Skirts', href: '/girls/skirts' },
+    //             ],
+    //         },
+    //     ],
+    // },
 ];
 
 export default function Navbar() {
