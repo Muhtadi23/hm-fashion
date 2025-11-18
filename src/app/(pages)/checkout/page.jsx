@@ -52,13 +52,47 @@ export default function CheckoutPage() {
                             <section className="bg-white dark:bg-gray-900 rounded-2xl shadow-sm border border-gray-200 dark:border-gray-800 p-6 lg:p-8">
                                 <h2 className="text-2xl font-semibold mb-6 text-gray-900 dark:text-white">Delivery Address</h2>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                                    <input required value={firstName} onChange={(e) => setFirstName(e.target.value)} placeholder="First Name" className="w-full px-5 py-4 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 focus:ring-4 focus:ring-black/10 dark:focus:ring-white/10 focus:border-black dark:focus:border-white transition" />
-                                    <input required value={lastName} onChange={(e) => setLastName(e.target.value)} placeholder="Last Name" className="w-full px-5 py-4 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 focus:ring-4 focus:ring-black/10 dark:focus:ring-white/10 focus:border-black dark:focus:border-white transition" />
-                                    <input required value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="Phone Number" className="w-full px-5 py-4 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 focus:ring-4 focus:ring-black/10 dark:focus:ring-white/10 focus:border-black dark:focus:border-white transition md:col-span-2" />
-                                    <input required value={address} onChange={(e) => setAddress(e.target.value)} placeholder="Street Address" className="w-full px-5 py-4 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 focus:ring-4 focus:ring-black/10 dark:focus:ring-white/10 focus:border-black dark:focus:border-white transition md:col-span-2" />
-                                    <input value={apartment} onChange={(e) => setApartment(e.target.value)} placeholder="Apartment, Suite, etc. (Optional)" className="w-full px-5 py-4 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 focus:ring-4 focus:ring-black/10 dark:focus:ring-white/10 focus:border-black dark:focus:border-white transition md:col-span-2" />
-                                    <input required value={city} onChange={(e) => setCity(e.target.value)} placeholder="City" className="w-full px-5 py-4 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 focus:ring-4 focus:ring-black/10 dark:focus:ring-white/10 focus:border-black dark:focus:border-white transition" />
-                                    <input value={postalCode} onChange={(e) => setPostalCode(e.target.value)} placeholder="Postal Code (Optional)" className="w-full px-5 py-4 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 focus:ring-4 focus:ring-black/10 dark:focus:ring-white/10 focus:border-black dark:focus:border-white transition" />
+                                    <input
+                                        required
+                                        value={firstName}
+                                        onChange={(e) => setFirstName(e.target.value)}
+                                        placeholder="First Name"
+                                        className="
+    w-full px-5 py-4 rounded-xl border border-gray-300 dark:border-gray-700 
+    bg-white dark:bg-gray-800 
+    placeholder-gray-500 dark:placeholder-gray-400
+    focus:ring-4 focus:ring-black/10 dark:focus:ring-white/10 
+    focus:border-black dark:focus:border-white 
+    focus:outline-none transition
+  "
+                                    />
+                                    <input required value={lastName} onChange={(e) => setLastName(e.target.value)} placeholder="Last Name" className=" w-full px-5 py-4 rounded-xl border border-gray-300 dark:border-gray-700 
+    bg-white dark:bg-gray-800 
+    placeholder-gray-500 dark:placeholder-gray-400
+    focus:ring-4 focus:ring-black/10 dark:focus:ring-white/10 
+    focus:border-black dark:focus:border-white 
+    focus:outline-none transition" />
+                                    <input required value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="Phone Number" className=" w-full px-5 py-4 rounded-xl border border-gray-300 dark:border-gray-700 
+    bg-white dark:bg-gray-800 
+    placeholder-gray-500 dark:placeholder-gray-400
+    focus:ring-4 focus:ring-black/10 dark:focus:ring-white/10 
+    focus:border-black dark:focus:border-white 
+    focus:outline-none transition" />
+                                    <input required value={address} onChange={(e) => setAddress(e.target.value)} placeholder="Street Address" className=" w-full px-5 py-4 rounded-xl border border-gray-300 dark:border-gray-700 
+    bg-white dark:bg-gray-800 
+    placeholder-gray-500 dark:placeholder-gray-400
+    focus:ring-4 focus:ring-black/10 dark:focus:ring-white/10 
+    focus:border-black dark:focus:border-white 
+    focus:outline-none transition" />
+                                    <input value={apartment} onChange={(e) => setApartment(e.target.value)} placeholder="Apartment, Suite, etc. (Optional)" className=" w-full px-5 py-4 rounded-xl border border-gray-300 dark:border-gray-700 
+    bg-white dark:bg-gray-800 
+    placeholder-gray-500 dark:placeholder-gray-400
+    focus:ring-4 focus:ring-black/10 dark:focus:ring-white/10 
+    focus:border-black dark:focus:border-white 
+    focus:outline-none transition" />
+                                    <input required value={city} onChange={(e) => setCity(e.target.value)} placeholder="City" className=" w-full px-5 py-4 rounded-xl border border-gray-300 dark:border-gray-700 
+bg-white dark:bg-gray-800 placeholder-gray-500 dark:placeholder-gray-400focus:ring-4 focus:ring-black/10 dark:focus:ring-white/10 focus:border-black dark:focus:border-white focus:outline-none transition" />
+                                    <input value={postalCode} onChange={(e) => setPostalCode(e.target.value)} placeholder="Postal Code (Optional)" className=" w-full px-5 py-4 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 placeholder-gray-500 dark:placeholder-gray-400focus:ring-4 focus:ring-black/10 dark:focus:ring-white/10 focus:border-black dark:focus:border-whit focus:outline-none transition" />
                                 </div>
 
                                 <div className="flex items-center gap-3 mt-6">
@@ -163,14 +197,14 @@ export default function CheckoutPage() {
                             <div className="border-t border-gray-200 dark:border-gray-800 mt-6 pt-6 space-y-4">
                                 <div className="flex justify-between text-lg">
                                     <span className="text-gray-600 dark:text-gray-400">Subtotal</span>
-                                    <span className="font-semibold">৳{subtotal.toFixed(2)}</span>
+                                    <span className="font-semibold dark:text-white">৳{subtotal.toFixed(2)}</span>
                                 </div>
                                 <div className="flex justify-between text-lg">
                                     <span className="text-gray-600 dark:text-gray-400">Shipping</span>
-                                    <span className="font-semibold">৳{shippingCost}.00</span>
+                                    <span className="font-semibold dark:text-white">৳{shippingCost}.00</span>
                                 </div>
                                 <div className="flex justify-between text-3xl font-bold pt-4 border-t border-gray-300 dark:border-gray-700">
-                                    <span>Total</span>
+                                    <span className="dark:text-gray-400">Total</span>
                                     <span className="text-black dark:text-white">৳{total.toFixed(2)}</span>
                                 </div>
                                 <p className="text-sm text-gray-500 text-center">Including VAT • Bangladesh Taka (BDT)</p>
