@@ -28,6 +28,7 @@ const Categories = () => {
     useEffect(() => {
         fetchCategories();
     }, []);
+    console.log(categories)
 
     if (getCategoryIsLoading) {
         return <p className="text-center text-gray-500 mt-5">Loading categories...</p>;
@@ -41,7 +42,7 @@ const Categories = () => {
                     className="flex flex-col items-center shadow-lg"
                 >
                     <Image
-                        src={category.image || "/Weddings.webp"}
+                        src={category.imageUrl || "/Weddings.webp"}
                         alt={category.name}
                         width={400}
                         height={200}

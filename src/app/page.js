@@ -1,42 +1,46 @@
+// app/page.jsx or pages/index.jsx
 import Categories from "@/components/ui/Categories/Categories";
 import CategoryBanner from "@/components/ui/CategoryBanner/CategoryBanner";
-import ProductCard from "@/components/ui/ProductCard/ProductCard";
+import ProductGrid from "@/components/ui/ProductCard/ProductGrid";
 import Slider from "@/components/ui/Slider/Slider";
 
 export default function Home() {
   return (
     <div>
       <Slider />
-      <div className="">
-        <Categories />
-      </div>
-      <div className="mt-4" >
-        <CategoryBanner imageSrc={"/women_sBanner-removebg-preview.png"} bannerContent={"Women's Collection"} />
-        <div className='grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 p-4'>
-          <ProductCard image={"/productWoman4.webp"} image2={"/productWoman44.webp"} />
-          <ProductCard image={"/productWoman1.webp"} image2={"/productWoman11.webp"} />
-          <ProductCard image={"/productWoman2.webp"} image2={"/productWoman22.webp"} />
-          <ProductCard image={"/productWoman3.webp"} image2={"/productWoman33.webp"} />
-        </div>
-      </div>
-      <div className="mt-4" >
-        <div className='grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 p-4'>
-          <ProductCard image={"/img1r.png"} />
-          <ProductCard image={"/img2.jpg"} />
-          <ProductCard image={"/img3.jpg"} />
-          <ProductCard image={"/img4.jpg"} />
-        </div>
-      </div>
-      <div className="mt-4" >
-        <CategoryBanner bannerContent={"Kid's Collection"} imageSrc={"/kids.jpg"} />
-        <div className='grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 p-4'>
-          <ProductCard image={"/kids1.webp"} />
-          <ProductCard image={"/kids2.webp"} />
-          <ProductCard image={"/kids3.webp"} />
-          <ProductCard image={"/kids4.webp"} />
-        </div>
+      <Categories />
+
+      {/* Women's Section */}
+      <div className="mt-10">
+        <CategoryBanner
+          imageSrc="/women_sBanner-removebg-preview.png"
+          bannerContent="Women's Collection"
+        />
+        <ProductGrid title="Women's Best Sellers" category="Women" limit={8} />
       </div>
 
+      {/* New Arrivals */}
+      <div className="mt-16">
+        <ProductGrid title="New Arrivals" limit={8} />
+      </div>
+
+      {/* Kids Section */}
+      <div className="mt-16">
+        <CategoryBanner
+          bannerContent="Kid's Collection"
+          imageSrc="/kids.jpg"
+        />
+        <ProductGrid title="Cute & Comfy for Kids" category="Kids" limit={8} />
+      </div>
+
+      {/* Sale Section */}
+      <div className="mt-16 bg-red-50 dark:bg-red-950/20 py-10">
+        <ProductGrid
+          title="Flash Sale – Up to 70% Off!"
+          limit={8}
+        // You can add a "onSale: true" filter later
+        />
+      </div>
     </div>
   );
 }

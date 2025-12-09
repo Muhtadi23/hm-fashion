@@ -1,4 +1,4 @@
-import ProductCard from '@/components/ui/ProductCard/ProductCard';
+import ProductCard from '@/components/ui/ProductCard/ProductGrid';
 import FilterBar from '@/components/ui/ProductFilter/filter-bar';
 import Image from 'next/image';
 import React from 'react';

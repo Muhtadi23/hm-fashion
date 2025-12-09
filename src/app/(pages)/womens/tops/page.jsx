@@ -1,5 +1,5 @@
 import CategoryBanner from '@/components/ui/CategoryBanner/CategoryBanner';
-import ProductCard from '@/components/ui/ProductCard/ProductCard';
+import ProductCard from '@/components/ui/ProductCard/ProductGrid';
 import React from 'react';
 
 const page = () => {
