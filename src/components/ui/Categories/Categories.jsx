@@ -42,7 +42,7 @@ const Categories = () => {
                     className="flex flex-col items-center shadow-lg"
                 >
                     <Image
-                        src={category.imageUrl || "/Weddings.webp"}
+                        src={category.imageUrl}
                         alt={category.name}
                         width={400}
                         height={200}
